@@ -1,0 +1,13 @@
+# secrets and local env
+*.env
+.env*
+# run outputs (eval/run.py writes to ple/runs/, but guard anyway)
+runs/
+# python
+__pycache__/
+*.pyc
+.venv/
+# editors / OS
+.DS_Store
+.idea/
+.vscode/
