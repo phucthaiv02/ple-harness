@@ -1,0 +1,11 @@
+name: ple-harness
+# Dev: DeepSeek V4.1 Flash qua API cá nhân. Trước khi nộp đổi sang một model google-cloud/<id>.
+model_api: openai-compatible/deepseek-flash
+model_base_url: https://api.deepseek.com/v1
+install: >-
+  uv venv --python 3.12 /opt/harness/venv
+  && uv pip install --python /opt/harness/venv/bin/python -r {src}/requirements.txt
+serve: /opt/harness/venv/bin/python {src}/serve.py
+env:
+  REASONING_EFFORT: "high"
+  COMPACT_AT_TOKENS: "150000"
